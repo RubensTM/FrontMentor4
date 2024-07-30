@@ -1,0 +1,188 @@
+* {
+    font-family: "Montserrat", serif;
+    padding: 0%;
+    margin: 0%;
+}
+
+$corBotao: hsl(158, 36%, 37%);
+$fundoBody: hsl(30, 38%, 92%);
+$fundoConteudo: hsl(0, 0%, 100%);
+$corParagrafo: hsl(228, 12%, 48%);
+$corTitulo: hsl(212, 21%, 14%);
+
+@mixin flexCenter ($a, $b, $c) {
+    display: $a;
+    align-items: $b;
+    justify-content: $c;
+}
+
+body {
+    @include flexCenter(flex, center, center);
+    background-color: hsl(30, 38%, 92%);
+
+    main {
+        @include flexCenter(flex, center, null);
+        background-color: $fundoConteudo;
+
+        width: 680px;
+        height: 550px;
+
+        margin-top: 200px;
+        border-radius: 15px;
+
+        .imagem img {
+            display: flex;
+            width: 350px;
+            height: 550px;
+
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+
+            #perfume {
+                display: flex;
+                color: $corParagrafo;
+
+                letter-spacing: 10px;
+                font-size: 14px;
+                font-weight: 700;
+
+                position: absolute;
+                top: 25%;
+
+            }
+
+            #titulo {
+                font-family: "Fraunces", serif;
+                color: $corTitulo;
+
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 1;
+                width: 250px;
+                height: 150px;
+
+                position: absolute;
+                top: 30%;
+            }
+
+            #paragrafoPrincipal {
+                color: $corParagrafo;
+
+                width: 300px;
+                margin-top: 100px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+
+            #valorPrincipal {
+                @include flexCenter(flex, center, null);
+                color: $corBotao;
+
+                font-family: "Fraunces", serif;
+                font-size: 40px;
+                font-weight: 700;
+                margin-top: 30px;
+            }
+
+            #valorRiscado {
+                margin-left: 30px;
+                color: $corParagrafo;
+
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            #botao {
+                #icone {
+                    margin-right: 15px;
+                }
+
+                background-color: $corBotao;
+                color: $fundoConteudo;
+
+                height: 50px;
+                width: 250px;
+
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+
+                font-weight: 700;
+
+                position: absolute;
+                top: 70%;
+            }
+
+            #botao:hover {
+                background-color: hsl(157, 35%, 15%);
+            }
+        }
+    }
+}
+
+@media (min-width: 670px) and (max-width: 800px) {
+    body {
+        main {
+            height: 900px;
+            width: 650px;
+
+            display: flex;
+            flex-direction: column;
+            
+            position:absolute;
+            top: -17.5%;
+
+            .imagem img{
+                display: none;
+            }
+            .imagem {
+                background-image:url('image-product-mobile.jpg');
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                border-bottom-left-radius: 0%;
+                width: 650px;
+                height: 480px;
+                
+            }
+
+            .conteudo{
+                #perfume {
+                    position: relative;
+                    top: 16%;
+                    height: 0;
+                }
+                #titulo{
+                    position: relative;
+                    top: 35%;
+                    height: 0px;
+                    width: 350px;
+                }
+                #paragrafoPrincipal {
+                    position: relative;
+                    top: 40%;
+                    width: 400px;
+                    height: 0px;
+                }
+
+                #valorPrincipal {
+                    position: relative;
+                    top: 90%;
+                    height: 0px;
+                }
+                #botao {
+                width: 350px;
+                position: relative;
+                top: 120%;
+            }
+        }
+
+        }
+    }
+}
