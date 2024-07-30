@@ -1,0 +1,143 @@
+* {
+  font-family: "Montserrat", serif;
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30, 38%, 92%);
+}
+body main {
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  width: 680px;
+  height: 550px;
+  margin-top: 200px;
+  border-radius: 15px;
+}
+body main .imagem img {
+  display: flex;
+  width: 350px;
+  height: 550px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 20px;
+}
+body main .conteudo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+body main .conteudo #perfume {
+  display: flex;
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: 25%;
+}
+body main .conteudo #titulo {
+  font-family: "Fraunces", serif;
+  color: hsl(212, 21%, 14%);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  top: 30%;
+}
+body main .conteudo #paragrafoPrincipal {
+  color: hsl(228, 12%, 48%);
+  width: 300px;
+  margin-top: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+body main .conteudo #valorPrincipal {
+  display: flex;
+  align-items: center;
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+body main .conteudo #valorRiscado {
+  margin-left: 30px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  font-size: 18px;
+}
+body main .conteudo #botao {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  height: 50px;
+  width: 250px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: 70%;
+}
+body main .conteudo #botao #icone {
+  margin-right: 15px;
+}
+body main .conteudo #botao:hover {
+  background-color: hsl(157, 35%, 15%);
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+  body main {
+    height: 900px;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -17.5%;
+  }
+  body main .imagem img {
+    display: none;
+  }
+  body main .imagem {
+    background-image: url("image-product-mobile.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0%;
+    width: 650px;
+    height: 480px;
+  }
+  body main .conteudo #perfume {
+    position: relative;
+    top: 16%;
+    height: 0;
+  }
+  body main .conteudo #titulo {
+    position: relative;
+    top: 35%;
+    height: 0px;
+    width: 350px;
+  }
+  body main .conteudo #paragrafoPrincipal {
+    position: relative;
+    top: 40%;
+    width: 400px;
+    height: 0px;
+  }
+  body main .conteudo #valorPrincipal {
+    position: relative;
+    top: 90%;
+    height: 0px;
+  }
+  body main .conteudo #botao {
+    width: 350px;
+    position: relative;
+    top: 120%;
+  }
+}/*# sourceMappingURL=style.css.map */
